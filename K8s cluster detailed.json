@@ -2564,7 +2564,7 @@
     ]
   },
   "timezone": "browser",
-  "title": "Kubernetes cluster monitoring detailed",
+  "title": "K8s cluster detailed",
   "uid": "cRO95cIMk",
-  "version": 29
+  "version": 30
 }
