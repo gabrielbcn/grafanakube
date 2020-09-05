@@ -630,7 +630,7 @@
     ]
   },
   "timezone": "browser",
-  "title": "Analysis by Pod",
-  "uid": "at-cost-analysis-pod",
-  "version": 3
+  "title": "K8s by Pod",
+  "uid": "k8s-pod",
+  "version": 4
 }
