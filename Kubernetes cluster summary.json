@@ -77,7 +77,7 @@
   "gnetId": 8685,
   "graphTooltip": 1,
   "id": null,
-  "iteration": 1597047540024,
+  "iteration": 1599266232079,
   "links": [
     {
       "asDropdown": true,
@@ -243,9 +243,11 @@
       "pluginVersion": "7.1.1",
       "targets": [
         {
-          "expr": "sum(kube_pod_container_resource_requests_cpu_cores) / sum(kube_node_status_allocatable_cpu_cores) * 100",
+          "expr": "sum(kube_pod_container_resource_requests_cpu_cores)\n",
           "format": "time_series",
+          "interval": "",
           "intervalFactor": 1,
+          "legendFormat": "",
           "refId": "A"
         }
       ],
@@ -1030,7 +1032,7 @@
         "orientation": "horizontal",
         "reduceOptions": {
           "calcs": [
-            "mean"
+            "lastNotNull"
           ],
           "fields": "",
           "values": false
@@ -2161,7 +2163,7 @@
     ]
   },
   "time": {
-    "from": "now-2d",
+    "from": "now-30m",
     "to": "now"
   },
   "timepicker": {
@@ -2189,7 +2191,7 @@
     ]
   },
   "timezone": "",
-  "title": "DEV K8s Cluster Summary",
-  "uid": "taQlRuxik",
-  "version": 20
+  "title": "K8s Cluster Summary",
+  "uid": "k8s-cluster-summary",
+  "version": 24
 }
