@@ -59,7 +59,7 @@
   "gnetId": 315,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1597937854398,
+  "iteration": 1599266266979,
   "links": [],
   "panels": [
     {
@@ -756,8 +756,8 @@
                 "value": null
               },
               {
-                "color": "red",
-                "value": 3
+                "color": "#EAB839",
+                "value": 4
               }
             ]
           },
@@ -839,7 +839,7 @@
         "orientation": "auto",
         "reduceOptions": {
           "calcs": [
-            "mean"
+            "lastNotNull"
           ],
           "fields": "",
           "values": false
@@ -1167,7 +1167,7 @@
       "grid": {},
       "gridPos": {
         "h": 7,
-        "w": 24,
+        "w": 16,
         "x": 0,
         "y": 12
       },
@@ -1259,6 +1259,83 @@
         "align": false,
         "alignLevel": null
       }
+    },
+    {
+      "cacheTimeout": null,
+      "datasource": "${DS_PROMETHEUS}",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {},
+          "decimals": 1,
+          "mappings": [
+            {
+              "id": 0,
+              "op": "=",
+              "text": "N/A",
+              "type": 1,
+              "value": "null"
+            }
+          ],
+          "min": 0,
+          "nullValueMode": "connected",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 4
+              },
+              {
+                "color": "red",
+                "value": 6
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 8,
+        "x": 16,
+        "y": 12
+      },
+      "id": 50,
+      "interval": null,
+      "links": [],
+      "maxDataPoints": 100,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "7.1.1",
+      "targets": [
+        {
+          "expr": "count(kubelet_node_name)",
+          "interval": "10s",
+          "intervalFactor": 1,
+          "legendFormat": "",
+          "refId": "A",
+          "step": 10
+        }
+      ],
+      "title": "Nodes",
+      "type": "stat"
     },
     {
       "collapsed": false,
@@ -2489,5 +2566,5 @@
   "timezone": "browser",
   "title": "Kubernetes cluster monitoring detailed",
   "uid": "cRO95cIMk",
-  "version": 24
+  "version": 29
 }
